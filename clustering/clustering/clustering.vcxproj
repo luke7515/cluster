@@ -78,6 +78,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\새 폴더\Coordinate.cpp" />
+    <ClCompile Include="..\..\..\새 폴더\DBScan.cpp" />
+    <ClCompile Include="..\..\..\새 폴더\kdtree.cpp" />
+    <ClCompile Include="..\..\..\새 폴더\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\새 폴더\Coordinate.h" />
+    <ClInclude Include="..\..\..\새 폴더\DBScan.h" />
+    <ClInclude Include="..\..\..\새 폴더\kdtree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
