@@ -10,6 +10,17 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coordinate.h" />
+    <ClInclude Include="DBScan.h" />
+    <ClInclude Include="kdtree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Coordinate.cpp" />
+    <ClCompile Include="DBScan.cpp" />
+    <ClCompile Include="kdtree.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ECA190DA-798E-4131-8BF6-76460BF1035A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -77,17 +88,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\새 폴더\Coordinate.cpp" />
-    <ClCompile Include="..\..\..\새 폴더\DBScan.cpp" />
-    <ClCompile Include="..\..\..\새 폴더\kdtree.cpp" />
-    <ClCompile Include="..\..\..\새 폴더\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\새 폴더\Coordinate.h" />
-    <ClInclude Include="..\..\..\새 폴더\DBScan.h" />
-    <ClInclude Include="..\..\..\새 폴더\kdtree.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
