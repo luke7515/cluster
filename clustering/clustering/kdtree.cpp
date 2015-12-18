@@ -95,9 +95,7 @@ void kdtree::getNeighbors_slave(coordinate* queryPoint, int radius, int k, kNode
 			coordinateNode * temp = new coordinateNode(node->point);
 			N->push(temp);
 		}
-		else{
-			//이러면 아닌새끼니까 버려!
-		}
+
 	}
 }
 void kdtree::MakeTree(){
@@ -109,17 +107,7 @@ int kdtree::getMedianIndex(int left, int right, int k, int center){
 	int tright = right;
 	int tleft = left-1;
 	Swap((left+right)/2, right);
-	Sets->pointSets[0]->points[depth];
-	Sets->pointSets[1]->points[depth];
-	Sets->pointSets[2]->points[depth];
-	Sets->pointSets[3]->points[depth];
-	Sets->pointSets[4]->points[depth];
-	Sets->pointSets[5]->points[depth];
-	Sets->pointSets[6]->points[depth];
-	Sets->pointSets[7]->points[depth];
-	Sets->pointSets[8]->points[depth];
-	Sets->pointSets[9]->points[depth];
-	Sets->pointSets[10]->points[depth];
+
 
 	while (true){
 		while (tleft<right &&Sets->pointSets[++tleft]->points[depth] < Sets->pointSets[right]->points[depth]){}

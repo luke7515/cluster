@@ -2,13 +2,14 @@
 #include "Coordinate.h"
 #include "kdtree.h"
 #include "DBScan.h"
-#include <crtdbg.h>
+//#include <crtdbg.h>
 using namespace std;
 
 int main(){
 	
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	//_CrtSetBreakAlloc(268);
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//
+	//_CrtSetBreakAlloc(166);
 	float** pt = new float*[11];
 	for (int i = 0; i < 11; i++){
 		pt[i] = new float[5];
@@ -71,17 +72,17 @@ int main(){
 
 
 	//coordinateSet* temp = new coordinateSet(pt, 2, 11);
-	kdtree* temp = new kdtree(pt, 5, 11);
-	temp->Sets->print();
+	kdtree* kdtemp = new kdtree(pt, 5, 11);
+	kdtemp->Sets->print();
 	cout << endl;
-	temp->MakeTree();
-	temp->SortById();
-	DBScan myDB(temp, 5, 2);
-	myDB.run();
-	delete temp;
-
+	kdtemp->MakeTree();
+	kdtemp->SortById();
+	DBScan *myDB = new DBScan(*kdtemp, 5, 2);
+	myDB->run();
+	delete kdtemp;
 	delete[] pt;
-	//delete myDB;
-	_CrtDumpMemoryLeaks();
+	delete myDB;
+
+	//_CrtDumpMemoryLeaks();
 	return 0;
 }
